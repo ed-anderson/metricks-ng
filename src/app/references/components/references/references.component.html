@@ -1,0 +1,9 @@
+<ng-container *ngIf="references$ | async as references">
+  <ul class="list-group">
+    <ng-container *ngFor="let reference of references">
+      <li class="list-group-item">
+        <app-reference [reference]="reference"></app-reference>
+      </li>
+    </ng-container>
+  </ul>
+</ng-container>

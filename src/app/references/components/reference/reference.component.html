@@ -1,0 +1,18 @@
+<h1 class="display-6">{{ reference.label }}</h1>
+<p>
+  <ng-container *ngFor="let author of reference.authors">
+    <span>{{ author }},&nbsp;</span>
+  </ng-container>
+  <span>{{ reference.title }},&nbsp;</span>
+  <span
+    ><em>{{ reference.journal }}</em
+    >,&nbsp;</span
+  >
+  <span>{{ reference.year }},&nbsp;</span>
+  <span
+    ><strong>{{ reference.volume }}</strong
+    >,&nbsp;</span
+  >
+  <span>{{ reference.pageStart }}-{{ reference.pageEnd }},&nbsp;</span>
+  <span>-&nbsp;DOI: <app-doi-link [doi]="reference.doi"></app-doi-link></span>
+</p>

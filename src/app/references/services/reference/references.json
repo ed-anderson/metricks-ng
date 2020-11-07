@@ -1,0 +1,64 @@
+{
+  "references": [
+    {
+      "label": "Process Mass Intensity (PMI)",
+      "authors": [
+        "C. Jiminez-Gonzalez",
+        "C. S. Ponder",
+        "Q. B. Broxterman",
+        "J. B. Manley"
+      ],
+      "title": "\"Using the Right Green Yardstick: Why Process Mass Intensity Is Used in the Pharmaceutical Industry To Drive More Sustainable Processes\"",
+      "journal": "Org. Process Res. Dev.",
+      "year": 2011,
+      "volume": 15,
+      "pageStart": 912,
+      "pageEnd": 917,
+      "doi": "10.1021/op200097d"
+    },
+    {
+      "label": "E Factor",
+      "authors": ["R. A. Sheldon"],
+      "title": "\"The E Factor: Fifteen years on\"",
+      "journal": "Green Chem.",
+      "year": 2017,
+      "volume": 9,
+      "pageStart": 1273,
+      "pageEnd": 1283,
+      "doi": "10.1039/B713736M"
+    },
+    {
+      "label": "Reaction Mass Efficiency (RME)",
+      "authors": [
+        "A. D. Curzons",
+        "D. J. C. Constable",
+        "D. N. Mortimer",
+        "V. L. Cunningham"
+      ],
+      "title": "\"So you think your process is green, how do you know?—Using principles of sustainability to determine what is green–a corporate perspective\"",
+      "journal": "Green Chem.",
+      "year": 2001,
+      "volume": 3,
+      "pageStart": 1,
+      "pageEnd": 6,
+      "doi": "10.1039/B007871I"
+    },
+    {
+      "label": "Effective Mass Yield (EMY)",
+      "authors": [
+        "T. Hudlicky",
+        "D. A. Frey",
+        "L. Koroniak",
+        "C. D. Claeboe",
+        "L. E. Brammer Jr."
+      ],
+      "title": "\"Toward a 'reagent-free' synthesis\"",
+      "journal": "Green Chem.",
+      "year": 1999,
+      "volume": 1,
+      "pageStart": 57,
+      "pageEnd": 59,
+      "doi": "10.1039/A901397K"
+    }
+  ]
+}
