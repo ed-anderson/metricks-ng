@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ReferenceService } from '../../services/reference/reference.service';
 import { ReferencesComponent } from './references.component';
 
 describe('ReferencesComponent', () => {
@@ -8,9 +8,9 @@ describe('ReferencesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReferencesComponent ]
-    })
-    .compileComponents();
+      declarations: [ReferencesComponent],
+      providers: [ReferenceService],
+    }).compileComponents();
   });
 
   beforeEach(() => {

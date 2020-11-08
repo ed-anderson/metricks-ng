@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { DoiLinkPipe } from '../../pipes/doi-link/doi-link.pipe';
 import { DoiLinkComponent } from './doi-link.component';
 
 describe('DoiLinkComponent', () => {
@@ -8,9 +8,8 @@ describe('DoiLinkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DoiLinkComponent ]
-    })
-    .compileComponents();
+      declarations: [DoiLinkComponent, DoiLinkPipe],
+    }).compileComponents();
   });
 
   beforeEach(() => {
