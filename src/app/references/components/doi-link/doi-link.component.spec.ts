@@ -5,6 +5,7 @@ import { DoiLinkComponent } from './doi-link.component';
 describe('DoiLinkComponent', () => {
   let component: DoiLinkComponent;
   let fixture: ComponentFixture<DoiLinkComponent>;
+  let doi: string = 'doi';
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -15,6 +16,7 @@ describe('DoiLinkComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DoiLinkComponent);
     component = fixture.componentInstance;
+    component.doi = doi;
     fixture.detectChanges();
   });
 
