@@ -1,0 +1,26 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">{{ productName | titlecase }}</th>
+      <th scope="col">{{ productMass | titlecase }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <input
+          [formControl]="nameFormControl"
+          type="text"
+          class="form-control"
+        />
+      </td>
+      <td>
+        <input
+          [formControl]="massFormControl"
+          type="number"
+          class="form-control"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
