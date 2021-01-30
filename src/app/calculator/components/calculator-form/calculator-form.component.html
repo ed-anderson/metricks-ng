@@ -1,0 +1,13 @@
+<div [formGroup]="form">
+  <app-reagent-table
+    [forms]="reagentForms"
+    (addReagentEvent)="onAddReagent()"
+    (removeReagentEvent)="onRemoveReagent($event)"
+  ></app-reagent-table>
+  <app-product-table [form]="form"></app-product-table>
+  <div>
+    <button type="button" class="btn btn-success" (click)="submit()">
+      Calculate
+    </button>
+  </div>
+</div>

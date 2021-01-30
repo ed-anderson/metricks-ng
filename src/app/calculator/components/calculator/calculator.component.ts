@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormArray, FormGroup } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 import { CalculatorFormService } from '../../services/calculator-form/calculator-form.service';
-import { CalculatorResults } from '../../services/calculator/models/calculator-results';
+import { CalculatorResults } from '../../models/calculator-results';
+import { CalculatorResultsViewModel } from '../../models/calculator-results.vm';
 
 @Component({
   selector: 'app-calculator',
@@ -10,25 +11,40 @@ import { CalculatorResults } from '../../services/calculator/models/calculator-r
   providers: [CalculatorFormService],
 })
 export class CalculatorComponent implements OnInit {
-  form: FormGroup;
-  reagentForms: AbstractControl[];
+  private readonly _results = new BehaviorSubject<CalculatorResultsViewModel[]>(
+    null
+  );
+  results$ = this._results.asObservable();
 
-  constructor(private calculatorFormService: CalculatorFormService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.form = this.calculatorFormService.getForm();
-    this.reagentForms = (this.form.controls['reagents'] as FormArray).controls;
+  ngOnInit(): void {}
+
+  calculatorResultsHandler(results: CalculatorResults): void {
+    const resultsViewModels = this.mapToCalculatorViewModels(results);
+    this._results.next(resultsViewModels);
   }
 
-  onAddReagent(): void {
-    this.calculatorFormService.addReagent();
-  }
-
-  onRemoveReagent(index: number): void {
-    this.calculatorFormService.removeReagent(index);
-  }
-
-  submit(): CalculatorResults {
-    return this.calculatorFormService.submit();
+  private mapToCalculatorViewModels(
+    results: CalculatorResults
+  ): CalculatorResultsViewModel[] {
+    return [
+      {
+        label: 'E-Factor',
+        value: results.eFactor,
+      },
+      {
+        label: 'Effective Mass Yield (EMY)',
+        value: results.effectiveMassYield,
+      },
+      {
+        label: 'Process Mass Intensity (PMI)',
+        value: results.processMassIntensity,
+      },
+      {
+        label: 'Reaction Mass Efficiency (RME)',
+        value: results.reactionMassEfficiency,
+      },
+    ];
   }
 }

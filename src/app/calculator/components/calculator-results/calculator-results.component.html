@@ -1,0 +1,13 @@
+<div class="card bg-success text-white">
+  <div class="card-header"><h4>Results</h4></div>
+  <div class="card-body">
+    <div class="row">
+      <div *ngFor="let result of results" class="col-6 mb-3">
+        <app-display-result
+          [label]="result.label"
+          [value]="result.value"
+        ></app-display-result>
+      </div>
+    </div>
+  </div>
+</div>

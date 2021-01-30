@@ -1,11 +1,9 @@
-<app-reagent-table
-  [forms]="reagentForms"
-  (addReagentEvent)="onAddReagent()"
-  (removeReagentEvent)="onRemoveReagent($event)"
-></app-reagent-table>
-<app-product-table [form]="form"></app-product-table>
-<div>
-  <button type="button" class="btn btn-success" (click)="submit()">
-    Calculate
-  </button>
+<div class="mb-4">
+  <app-calculator-form
+    (calculatorResultsEmitter)="calculatorResultsHandler($event)"
+  ></app-calculator-form>
 </div>
+
+<ng-container *ngIf="results$ | async as results">
+  <app-calculator-results [results]="results"></app-calculator-results>
+</ng-container>

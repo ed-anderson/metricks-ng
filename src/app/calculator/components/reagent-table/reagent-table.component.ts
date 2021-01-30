@@ -8,6 +8,7 @@ import { AbstractControl, FormArray, FormGroup } from '@angular/forms';
 })
 export class ReagentTableComponent implements OnInit {
   @Input() forms: FormGroup[];
+
   @Output() addReagentEvent = new EventEmitter<void>();
   @Output() removeReagentEvent = new EventEmitter<number>();
 

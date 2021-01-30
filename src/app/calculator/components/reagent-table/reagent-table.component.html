@@ -31,11 +31,28 @@
             </svg>
           </button>
         </td>
-        <td><input type="text" class="form-control" /></td>
-        <td><input type="number" class="form-control" /></td>
+        <td>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="form.controls['reagentName']"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            class="form-control"
+            [formControl]="form.controls['reagentMass']"
+          />
+        </td>
         <td>
           <div class="form-check form-check-inline">
-            <input id="benignCheck" type="checkbox" class="form-check-input" />
+            <input
+              id="benignCheck"
+              type="checkbox"
+              class="form-check-input"
+              [formControl]="form.controls['benign']"
+            />
             <label for="benignCheck" class="form-check-label">Benign</label>
           </div>
           <div class="form-check form-check-inline">
@@ -43,6 +60,7 @@
               id="reactantCheck"
               type="checkbox"
               class="form-check-input"
+              [formControl]="form.controls['reactant']"
             />
             <label for="reactantCheck" class="form-check-label">Reactant</label>
           </div>
